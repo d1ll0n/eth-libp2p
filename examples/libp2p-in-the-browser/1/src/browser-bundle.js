@@ -1,13 +1,13 @@
 'use strict'
 
-const WebRTCStar = require('libp2p-webrtc-star')
+const WebRTCStar = require('eth-libp2p-webrtc-star')
 const WebSockets = require('libp2p-websockets')
-const WebSocketStar = require('libp2p-websocket-star')
+const WebSocketStar = require('eth-libp2p-websocket-star')
 const Mplex = require('libp2p-mplex')
 const SPDY = require('libp2p-spdy')
-const SECIO = require('libp2p-secio')
+const SECIO = require('eth-libp2p-secio')
 const Bootstrap = require('libp2p-bootstrap')
-const DHT = require('libp2p-kad-dht')
+const DHT = require('eth-libp2p-kad-dht')
 const defaultsDeep = require('@nodeutils/defaults-deep')
 const libp2p = require('../../../../')
 

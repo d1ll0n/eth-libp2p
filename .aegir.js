@@ -2,8 +2,8 @@
 
 const pull = require('pull-stream')
 const parallel = require('async/parallel')
-const WebSocketStarRendezvous = require('libp2p-websocket-star-rendezvous')
-const sigServer = require('libp2p-webrtc-star/src/sig-server')
+const WebSocketStarRendezvous = require('eth-libp2p-websocket-star-rendezvous')
+const sigServer = require('eth-libp2p-webrtc-star/src/sig-server')
 
 const Node = require('./test/utils/bundle-nodejs.js')
 const {
@@ -22,13 +22,11 @@ const before = (done) => {
       sigServer.start({
         port: WRTC_RENDEZVOUS_MULTIADDR.nodeAddress().port
         // cryptoChallenge: true TODO: needs https://github.com/libp2p/js-libp2p-webrtc-star/issues/128
-      }, (err, server) => {
-        if (err) {
-          return cb(err)
-        }
+      }).then(server => {
         wrtcRendezvous = server
         cb()
       })
+      .catch(err => cb(err))
     },
     (cb) => {
       WebSocketStarRendezvous.start({

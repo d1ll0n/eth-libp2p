@@ -25,7 +25,7 @@ First thing is to create our own bundle! Insert:
 
 const libp2p = require('libp2p')
 const TCP = require('libp2p-tcp')
-const PeerInfo = require('peer-info')
+const PeerInfo = require('eth-peer-info')
 const waterfall = require('async/waterfall')
 const defaultsDeep = require('@nodeutils/defaults-deep')
 

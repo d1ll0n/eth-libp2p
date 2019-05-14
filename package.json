@@ -1,8 +1,7 @@
 {
-  "name": "libp2p",
-  "version": "0.25.3",
+  "name": "eth-libp2p",
+  "version": "0.0.1",
   "description": "JavaScript base class for libp2p bundles",
-  "leadMaintainer": "Jacob Heun <jacobheun@gmail.com>",
   "main": "src/index.js",
   "files": [
     "dist",
@@ -20,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/libp2p/js-libp2p.git"
+    "url": "https://github.com/d1ll0n/eth-libp2p.git"
   },
   "keywords": [
     "IPFS"
@@ -31,9 +30,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/libp2p/js-libp2p/issues"
+    "url": "https://github.com/d1ll0n/eth-libp2p/issues"
   },
-  "homepage": "https://github.com/libp2p/js-libp2p",
+  "homepage": "https://github.com/d1ll0n/eth-libp2p",
   "browser": {
     "./test/utils/bundle-nodejs": "./test/utils/bundle-browser"
   },
@@ -41,18 +40,18 @@
     "async": "^2.6.2",
     "debug": "^4.1.1",
     "err-code": "^1.1.2",
+    "eth-libp2p-switch": "0.0.2",
+    "eth-peer-book": "0.0.1",
+    "eth-peer-id": "0.0.2",
+    "eth-peer-info": "0.0.2",
     "fsm-event": "^2.1.0",
     "libp2p-connection-manager": "~0.1.0",
     "libp2p-floodsub": "~0.16.0",
     "libp2p-ping": "~0.8.5",
-    "libp2p-switch": "~0.42.9",
     "libp2p-websockets": "~0.12.2",
     "mafmt": "^6.0.7",
     "multiaddr": "^6.0.6",
     "once": "^1.4.0",
-    "peer-book": "~0.9.1",
-    "peer-id": "~0.12.2",
-    "peer-info": "~0.15.1",
     "superstruct": "~0.6.0"
   },
   "devDependencies": {
@@ -63,20 +62,20 @@
     "cids": "~0.5.8",
     "dirty-chai": "^2.0.1",
     "electron-webrtc": "~0.3.0",
+    "eth-libp2p-delegated-peer-routing": "0.0.1",
+    "eth-libp2p-kad-dht": "0.0.1",
+    "eth-libp2p-secio": "0.0.1",
+    "eth-libp2p-webrtc-star": "0.0.2",
+    "eth-libp2p-websocket-star": "0.0.1",
+    "eth-libp2p-websocket-star-rendezvous": "0.0.1",
     "interface-datastore": "~0.6.0",
     "libp2p-bootstrap": "~0.9.7",
     "libp2p-circuit": "~0.3.6",
     "libp2p-delegated-content-routing": "~0.2.2",
-    "libp2p-delegated-peer-routing": "~0.2.2",
-    "libp2p-kad-dht": "~0.14.8",
     "libp2p-mdns": "~0.12.2",
     "libp2p-mplex": "~0.8.4",
-    "libp2p-secio": "~0.11.1",
     "libp2p-spdy": "~0.13.2",
     "libp2p-tcp": "~0.13.0",
-    "libp2p-webrtc-star": "~0.15.8",
-    "libp2p-websocket-star": "~0.10.2",
-    "libp2p-websocket-star-rendezvous": "~0.3.0",
     "lodash.times": "^4.3.2",
     "nock": "^10.0.6",
     "pull-goodbye": "0.0.2",

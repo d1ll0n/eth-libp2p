@@ -1,7 +1,7 @@
 'use strict'
 
-const PeerId = require('peer-id')
-const PeerInfo = require('peer-info')
+const PeerId = require('eth-peer-id')
+const PeerInfo = require('eth-peer-info')
 const multiaddr = require('multiaddr')
 const errCode = require('err-code')
 

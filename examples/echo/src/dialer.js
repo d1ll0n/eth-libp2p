@@ -5,8 +5,8 @@
  * Dialer Node
  */
 
-const PeerId = require('peer-id')
-const PeerInfo = require('peer-info')
+const PeerId = require('eth-peer-id')
+const PeerInfo = require('eth-peer-info')
 const Node = require('./libp2p-bundle')
 const pull = require('pull-stream')
 const async = require('async')

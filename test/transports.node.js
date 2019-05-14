@@ -6,12 +6,12 @@ chai.use(require('dirty-chai'))
 const expect = chai.expect
 const parallel = require('async/parallel')
 const series = require('async/series')
-const signalling = require('libp2p-webrtc-star/src/sig-server')
-const rendezvous = require('libp2p-websocket-star-rendezvous')
+const signalling = require('eth-libp2p-webrtc-star/src/sig-server')
+const rendezvous = require('eth-libp2p-websocket-star-rendezvous')
 const TCP = require('libp2p-tcp')
 const WS = require('libp2p-websockets')
-const WSStar = require('libp2p-websocket-star')
-const WRTCStar = require('libp2p-webrtc-star')
+const WSStar = require('eth-libp2p-websocket-star')
+const WRTCStar = require('eth-libp2p-webrtc-star')
 const wrtc = require('wrtc')
 
 const createNode = require('./utils/create-node.js')
@@ -415,8 +415,7 @@ describe('transports', () => {
       this.timeout(5 * 1000)
 
       parallel([
-        (cb) => signalling.start({ port: 24642 }, (err, server) => {
-          expect(err).to.not.exist()
+        (cb) => signalling.start({ port: 24642 }).then(server => {
           ss = server
           cb()
         }),
@@ -516,7 +515,7 @@ describe('transports', () => {
         (cb) => nodeTCP.stop(cb),
         (cb) => nodeWS.stop(cb),
         (cb) => nodeWebRTCStar.stop(cb),
-        (cb) => ss.stop(cb)
+        (cb) => ss.stop().then(cb)
       ], done)
     })
 

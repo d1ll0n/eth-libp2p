@@ -15,7 +15,7 @@ SECIO is the crypto channel developed for IPFS, it is a TLS 1.3 like crypto chan
 To add it to your libp2p bundle, all you have to do is:
 
 ```JavaScript
-const SECIO = require('libp2p-secio')
+const SECIO = require('eth-libp2p-secio')
 
 class MyBundle extends libp2p {
   constructor (peerInfo) {

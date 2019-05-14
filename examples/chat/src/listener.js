@@ -1,8 +1,8 @@
 'use strict'
 /* eslint-disable no-console */
 
-const PeerId = require('peer-id')
-const PeerInfo = require('peer-info')
+const PeerId = require('eth-peer-id')
+const PeerInfo = require('eth-peer-info')
 const Node = require('./libp2p-bundle.js')
 const pull = require('pull-stream')
 const Pushable = require('pull-pushable')

@@ -8,7 +8,7 @@ chai.use(require('dirty-chai'))
 const expect = chai.expect
 const parallel = require('async/parallel')
 const _times = require('lodash.times')
-const DelegatedPeerRouter = require('libp2p-delegated-peer-routing')
+const DelegatedPeerRouter = require('eth-libp2p-delegated-peer-routing')
 const sinon = require('sinon')
 const nock = require('nock')
 

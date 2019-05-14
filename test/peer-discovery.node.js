@@ -5,7 +5,7 @@ const chai = require('chai')
 chai.use(require('dirty-chai'))
 const expect = chai.expect
 const sinon = require('sinon')
-const signalling = require('libp2p-webrtc-star/src/sig-server')
+const signalling = require('eth-libp2p-webrtc-star/src/sig-server')
 const parallel = require('async/parallel')
 const crypto = require('crypto')
 
@@ -24,8 +24,7 @@ describe('peer discovery', () => {
       port++
       parallel([
         (cb) => {
-          signalling.start({ port: port }, (err, server) => {
-            expect(err).to.not.exist()
+          signalling.start({ port: port }).then(server => {
             ss = server
             cb()
           })
@@ -65,7 +64,7 @@ describe('peer discovery', () => {
         (cb) => nodeA.stop(cb),
         (cb) => nodeB.stop(cb),
         (cb) => nodeC.stop(cb),
-        (cb) => ss.stop(cb)
+        (cb) => ss.stop().then(cb)
       ], done)
     })
 

@@ -3,12 +3,12 @@
 
 const Libp2p = require('libp2p')
 const Websockets = require('libp2p-websockets')
-const WebSocketStar = require('libp2p-websocket-star')
-const WebRTCStar = require('libp2p-webrtc-star')
+const WebSocketStar = require('eth-libp2p-websocket-star')
+const WebRTCStar = require('eth-libp2p-webrtc-star')
 const MPLEX = require('libp2p-mplex')
-const SECIO = require('libp2p-secio')
-const KadDHT = require('libp2p-kad-dht')
-const DelegatedPeerRouter = require('libp2p-delegated-peer-routing')
+const SECIO = require('eth-libp2p-secio')
+const KadDHT = require('eth-libp2p-kad-dht')
+const DelegatedPeerRouter = require('eth-libp2p-delegated-peer-routing')
 const DelegatedContentRouter = require('libp2p-delegated-content-routing')
 
 export default function Libp2pBundle ({peerInfo, peerBook}) {

@@ -1,6 +1,6 @@
 'use strict'
 
-const PeerInfo = require('peer-info')
+const PeerInfo = require('eth-peer-info')
 const Node = require('./browser-bundle')
 
 function createNode (callback) {
